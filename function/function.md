@@ -1,7 +1,7 @@
 ## F. 큰 넓이 구하기 
 
 ### 문제
-![그림](https://lh3.googleusercontent.com/A-pBEqQZoFvVSxFKMLUgRXeDngoOxzuxfuOBokVfZiz6aBmxnonCrq7HjoeLWXu4CP4Pg6YVChz48tY=w1896-h835)
+![그림](http://alps.jbnu.ac.kr/files/attach/images/937/899/001/89a3c3bdc86485ff832e9967278a4afa.jpg)
 
 그림과 같이 제한된 사각형 안에 두 점을 지나는 직선이 주어진다.
 직선을 기준으로 사각형을 구분지었을 때, 왼쪽과 오른쪽 중 더 넓은 쪽을 출력하시오.
