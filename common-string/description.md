@@ -28,7 +28,7 @@
 ### 예제 입력
 
 ```
-4
+5
 abcdfghjqz
 abcdefgijkrxyz
 efgbcefgh
@@ -37,6 +37,8 @@ abxyzcde
 xyz
 vwxyzabcde
 abcdevwxyz
+ab
+xyz
 ```
 
 ### 예제 출력
@@ -46,4 +48,5 @@ abcdfgjz 6 2
 bcefgh 3 3
 xyz 5 0
 abcde 5 5
+2 3
 ```
