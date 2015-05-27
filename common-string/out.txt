@@ -1,0 +1,39 @@
+<case>
+abcdfgjz 6 2
+bcefgh 3 3
+xyz 0 5
+abcde 5 5
+3 2
+</case>
+<case>
+b 1 1
+2 2
+ibimuuhflqihngoqdwzldjhgwivx 72 72
+rxhvslqlgjvnykbiggaxdfpnhclsfn 70 70
+jyuaazubjxfykyieqzfgwdhtmjvy 72 72
+cbabaabb 7 2
+aaabcbbaacbbb 6 12
+acbccaccbca 1 15
+abcaabbaaaaaa 4 14
+babccaaaaaaacbcb 7 7
+cacaafaefcccbcbfdbefccdfaeea 30 31
+cbccccdeebefafacaafad 27 13
+eedeefcfadbedefbdbcbcb 11 33
+afaeecedefdeeffedecbacae 19 32
+acedabbdddadedebbcdccfbf 29 19
+ecefddaafbacbaffcdbdbbdab 12 33
+ebedbfaceecbfdddfffbfeb 37 8
+feedeadfccebcfcbbcaadcbb 28 18
+ebccadaebdaecafcfb 32 13
+fbefddddabbabfcddbadcdbf 22 20
+effeiaceaedfdhhacaagfhdiciaeghjc 43 37
+ihieacabcjeahcjgcaihcehhhhjcbbigfciiaa 56 40
+hjagebehchbgajjfhdfacieachibebfjbgahad 37 57
+behhjbbcbbbjdcifgidaicghefgbheieieih 46 55
+hcaebjjbhjfedabdgebfbjghfadbhhighfb 37 52
+chdjdbjbgffiejaggfhafeedhfhjfibjijh 31 64
+jahcidfjcaedbifiiehcefhai 44 37
+ibcebfigfggjchjcfbbeecbfdfgiijgic 57 32
+ahdebdfagdgcdbdddhaajfhjihhbbcfjdcac 56 47
+hacgdeehgdhbeebhhdacfbebaafadggfebea 47 51
+</case>
