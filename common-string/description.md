@@ -46,7 +46,7 @@ xyz
 ```
 abcdfgjz 6 2
 bcefgh 3 3
-xyz 5 0
+xyz 0 5
 abcde 5 5
-2 3
+3 2
 ```
