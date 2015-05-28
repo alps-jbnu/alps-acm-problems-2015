@@ -1,0 +1,15 @@
+<case>
+50.0
+</case>
+<case>
+41.0
+</case>
+<case>
+77500.0
+</case>
+<case>
+95.5
+</case>
+<case>
+500999.5
+</case>
