@@ -1,5 +1,5 @@
 
-# A. a2Z Number
+# a2Z Number
 
 ### 문제 설명
 
