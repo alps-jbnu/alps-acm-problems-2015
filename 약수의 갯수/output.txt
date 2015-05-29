@@ -1,5 +1,5 @@
 <case>
-1 4
+0 1
 </case>
 <case>
 1 0
@@ -8,8 +8,11 @@
 1 2
 </case>
 <case>
-3 8
+3 12
 </case>
 <case>
-3 12
+7 0
+</case>
+<case>
+95 384
 </case>
