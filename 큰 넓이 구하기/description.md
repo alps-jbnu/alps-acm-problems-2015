@@ -1,4 +1,4 @@
-## F. 큰 넓이 구하기 
+## 큰 넓이 구하기 
 
 ### 문제
 ![그림](http://alps.jbnu.ac.kr/files/attach/images/937/899/001/89a3c3bdc86485ff832e9967278a4afa.jpg)
