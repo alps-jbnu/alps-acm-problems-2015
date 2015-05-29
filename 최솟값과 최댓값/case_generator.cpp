@@ -45,6 +45,7 @@ int main() {
     // TODO: 길이를 예상하여 케이스를 생성하기 조금 어렵습니다.
     // 특정 길이를 갖는 수열을 어떻게 구할 수 있을까요?
 
+    cout << 30 << endl;
     for (int i = 0; i < 10; i++) {
         first_out = true;
         make_expression(1.0, 0.2, 1, 100);

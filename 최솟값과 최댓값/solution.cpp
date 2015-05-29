@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <cstdlib>
 #include <string>
 #include <algorithm>
@@ -19,6 +19,9 @@ int expression() {
 }
 
 int main() {
-    cout << expression() << endl;
+    int cases;
+    cin >> cases;
+    for (int tc = 0; tc < cases; tc++)
+        cout << expression() << endl;
     return 0;
 }
