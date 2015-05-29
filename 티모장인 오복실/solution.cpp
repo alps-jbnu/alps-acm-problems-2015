@@ -10,10 +10,10 @@ int main() {
     scanf("%d %d", &n, &k);
     for (i = 0; i < n; ++i)
         scanf("%d", &s[i]);
-    int l=0, r=n-1, p;
+    int l, r, p;
     for (i = 0; i < k; ++i){
         scanf("%d", &p);
-        l=0, r=n-1;
+        l = 0, r = n - 1;
         while (l <= r){
             int mid = (l + r) / 2;
             if (s[mid] > p)
