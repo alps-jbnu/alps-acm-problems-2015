@@ -83,7 +83,10 @@ int main() {
 
         int insertions = target.size() - trace.size();
         int deletions = source.size() - trace.size();
-        cout << trace << ' ' << insertions << ' ' << deletions << endl;
+        if (trace.size() > 0)
+            cout << trace << ' ' << insertions << ' ' << deletions << endl;
+        else
+            cout << insertions << ' ' << deletions << endl;
     }
     return 0;
 }
