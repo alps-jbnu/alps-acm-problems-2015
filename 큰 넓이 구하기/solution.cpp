@@ -1,16 +1,19 @@
 #include <iostream>
-
 using namespace std;
 
 int main()
 {
-	int x, y,y1,x1;
-	float trangle,rect;
-	cin >> x >> y;
-	cin >> y1;
-	cin >> x1;
-	trangle = (y1*x1) / 2;
-	rect = x*y;
-	if ((rect - trangle) >= trangle)
-		cout << rect - trangle << endl;
+    double a, b, c, d;
+    cin >> a >> b >> c >> d;
+
+    double triangle = c * d / 2.0;
+    double rectangle = a * b - triangle;
+
+    cout.setf(ios::fixed);
+    cout.precision(1);
+    if (triangle > rectangle)
+        cout << triangle;
+    else
+        cout << rectangle;
+    cout << endl;
 }
