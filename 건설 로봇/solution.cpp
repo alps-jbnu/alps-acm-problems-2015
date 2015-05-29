@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <vector>
 #include <utility>
 #include <algorithm>
@@ -9,28 +9,28 @@ using namespace std;
 #define INF 987654321
 
 
-/* ¹®Á¦ ÀÔ·Â */
+/* ë¬¸ì œ ì…ë ¥ */
 
-int nWorks;  // ÀÛ¾÷ ¼ö
-int nKinds;  // ±âÁ¾ ¼ö
+int nWorks;  // ì‘ì—… ìˆ˜
+int nKinds;  // ê¸°ì¢… ìˆ˜
 
-// isCapable[i][j]: ±âÁ¾ j¿¡ ´ëÇÑ ÀÛ¾÷ iÀÇ ¼öÇà °¡´É ¿©ºÎ
+// isCapable[i][j]: ê¸°ì¢… jì— ëŒ€í•œ ì‘ì—… iì˜ ìˆ˜í–‰ ê°€ëŠ¥ ì—¬ë¶€
 bool isCapable[MAX_LEN][MAX_LEN];
 
 
-/* ±×·¡ÇÁ ³ëµå */
+/* ê·¸ë˜í”„ ë…¸ë“œ */
 
-int src_num;  // 0: ¼Ò½º ³ëµå
-int sink_num;  // 1: ½ÌÅ© ³ëµå
-int w_num_first, w_num_last;  // ÀÛ¾÷ 1 ~ W¿¡ ´ëÇÑ ³ëµå
-int k_num_first, k_num_last;  // ±âÁ¾ 1 ~ K¿¡ ´ëÇÑ ³ëµå
-int max_num;  // ¸¶Áö¸· ³ëµå ¹øÈ£
+int src_num;  // 0: ì†ŒìŠ¤ ë…¸ë“œ
+int sink_num;  // 1: ì‹±í¬ ë…¸ë“œ
+int w_num_first, w_num_last;  // ì‘ì—… 1 ~ Wì— ëŒ€í•œ ë…¸ë“œ
+int k_num_first, k_num_last;  // ê¸°ì¢… 1 ~ Kì— ëŒ€í•œ ë…¸ë“œ
+int max_num;  // ë§ˆì§€ë§‰ ë…¸ë“œ ë²ˆí˜¸
 
 
-/* ÇÃ·Î¿ì ³×Æ®¿öÅ© */
+/* í”Œë¡œìš° ë„¤íŠ¸ì›Œí¬ */
 
-int flow[MAX_LEN][MAX_LEN];  // ÇöÀç À¯·®
-int capacity[MAX_LEN][MAX_LEN];  // À¯·® ÇÑ°è
+int flow[MAX_LEN][MAX_LEN];  // í˜„ì¬ ìœ ëŸ‰
+int capacity[MAX_LEN][MAX_LEN];  // ìœ ëŸ‰ í•œê³„
 
 void addEdge(int s, int t, int cap) {
     capacity[s][t] = cap;
@@ -48,15 +48,15 @@ void addFlow(int s, int t, int amount) {
 
 /* augment path */
 
-bool pathFound;  // augment path Ã£¾Ò´ÂÁö ¿©ºÎ
+bool pathFound;  // augment path ì°¾ì•˜ëŠ”ì§€ ì—¬ë¶€
 
-// augment path Ã£À» ¶§, ÀÌÀü ³ëµå ±â·Ï
-// -1: ¹Ì¹æ¹®
-// -2: ¼Ò½º ³ëµå
-// ±× ¿Ü: ÀÌÀü ³ëµå
+// augment path ì°¾ì„ ë•Œ, ì´ì „ ë…¸ë“œ ê¸°ë¡
+// -1: ë¯¸ë°©ë¬¸
+// -2: ì†ŒìŠ¤ ë…¸ë“œ
+// ê·¸ ì™¸: ì´ì „ ë…¸ë“œ
 int parent[MAX_LEN];
 
-int minRes[MAX_LEN];  // augment path Ã£À» ¶§, path Áß ÃÖ¼Ò ÀÜ¿© À¯·®
+int minRes[MAX_LEN];  // augment path ì°¾ì„ ë•Œ, path ì¤‘ ìµœì†Œ ì”ì—¬ ìœ ëŸ‰
 
 void findAugmentPath() {
     pathFound = false;
@@ -92,9 +92,9 @@ int main() {
     cin >> cases;
     for (int tc = 0; tc < cases; tc++) {
 
-        /* ÀÔ·Â ¹× ÃÊ±âÈ­ */
+        /* ì…ë ¥ ë° ì´ˆê¸°í™” */
 
-        // ±×·¡ÇÁ ³ëµå ¹øÈ£¸¦ ¸Å±ä´Ù.
+        // ê·¸ë˜í”„ ë…¸ë“œ ë²ˆí˜¸ë¥¼ ë§¤ê¸´ë‹¤.
         src_num = 0;
         sink_num = 1;
 
@@ -115,7 +115,7 @@ int main() {
         cout << "k_num_first: " << k_num_first << endl;
         cout << "k_num_last: " << k_num_last << endl;
 
-        // ÇÃ·Î¿ì ³×Æ®¿öÅ© ÃÊ±âÈ­
+        // í”Œë¡œìš° ë„¤íŠ¸ì›Œí¬ ì´ˆê¸°í™”
         for (int i = 0; i <= max_num; i++) {
             for (int j = 0; j <= max_num; j++) {
                 capacity[i][j] = 0;
@@ -123,7 +123,7 @@ int main() {
             }
         }
 
-        // ±×·¡ÇÁ °£¼± Ãß°¡
+        // ê·¸ë˜í”„ ê°„ì„  ì¶”ê°€
         for (int w_num = w_num_first; w_num <= w_num_last; w_num++) {
             int robot_limit;
             cin >> robot_limit;
@@ -143,7 +143,7 @@ int main() {
         }
 
 
-        /* °¡´ÉÇÑ ÇÑ augument path¸¦ Ã£¾Æ flow¸¦ ´Ã¸°´Ù. */
+        /* ê°€ëŠ¥í•œ í•œ augument pathë¥¼ ì°¾ì•„ flowë¥¼ ëŠ˜ë¦°ë‹¤. */
 
         while (true) {
             findAugmentPath();
@@ -164,7 +164,7 @@ int main() {
         }
 
 
-        /* ÀÛ¾÷µé·ÎºÎÅÍ ½ÌÅ©·Î °¡´Â °£¼±À» Á¶»çÇÏ¿©, Á¤´äÀ» Ãâ·ÂÇÑ´Ù. */
+        /* ì‘ì—…ë“¤ë¡œë¶€í„° ì‹±í¬ë¡œ ê°€ëŠ” ê°„ì„ ì„ ì¡°ì‚¬í•˜ì—¬, ì •ë‹µì„ ì¶œë ¥í•œë‹¤. */
 
         for (int w_num = w_num_first; w_num <= w_num_last; w_num++) {
             int w_flow = flow[w_num][sink_num];
