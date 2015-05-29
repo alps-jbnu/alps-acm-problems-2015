@@ -5,7 +5,7 @@
 #include <queue>
 using namespace std;
 
-#define MAX_LEN 5000
+#define MAX_LEN 102
 #define INF 987654321
 
 
@@ -75,7 +75,7 @@ void findAugmentPath() {
         for (int neighbor = 0; neighbor <= max_num; neighbor++) {
             if (parent[neighbor] == -1 && residualFlow(here, neighbor) > 0) {
                 parent[neighbor] = here;
-                minRes[neighbor] = min(minRes[neighbor], residualFlow(here, neighbor));
+                minRes[neighbor] = min(minRes[here], residualFlow(here, neighbor));
                 if (neighbor == sink_num) {
                     pathFound = true;
                     return;
@@ -100,20 +100,13 @@ int main() {
 
         cin >> nWorks >> nKinds;
 
-        w_num_first = 2;
-        w_num_last = w_num_first + (nWorks - 1);
-
-        k_num_first = w_num_last + 1;
+        k_num_first = 2;
         k_num_last = k_num_first + (nKinds - 1);
 
-        max_num = k_num_last;
+        w_num_first = k_num_last + 1;
+        w_num_last = w_num_first + (nWorks - 1);
 
-        cout << "src_num: " << src_num << endl;
-        cout << "sink_num: " << sink_num << endl;
-        cout << "w_num_first: " << w_num_first << endl;
-        cout << "w_num_last: " << w_num_last << endl;
-        cout << "k_num_first: " << k_num_first << endl;
-        cout << "k_num_last: " << k_num_last << endl;
+        max_num = w_num_last;
 
         // 플로우 네트워크 초기화
         for (int i = 0; i <= max_num; i++) {
@@ -151,29 +144,26 @@ int main() {
             if (!pathFound)
                 break;
 
-            cout << "path found:";
+            // cout << "path found:";
             int amount = minRes[sink_num];
             int here = sink_num;
             while (here != src_num) {
-                cout << ' ' << here;
+                // cout << ' ' << here;
                 int pre = parent[here];
                 addFlow(pre, here, amount);
                 here = pre;
             }
-            cout << endl;
+            // cout << ' ';
+            // cout << "flow: " << amount << endl;
         }
 
 
-        /* 작업들로부터 싱크로 가는 간선을 조사하여, 정답을 출력한다. */
+        /* 소스로부터 모든 기종으로 가는 간선을 조사하여, 정답을 출력한다. */
 
-        for (int w_num = w_num_first; w_num <= w_num_last; w_num++) {
-            int w_flow = flow[w_num][sink_num];
-            cout << w_flow;
-            if (w_num == w_num_last)
-                cout << endl;
-            else
-                cout << ' ';
-        }
+        int answer = 0;
+        for (int k_num = k_num_first; k_num <= k_num_last; k_num++)
+            answer += flow[src_num][k_num];
+        cout << answer << endl;
 
     }
     return 0;
