@@ -43,10 +43,38 @@ int main(){
 - B의 각 원소에 대해 A에서 **스위핑**으로 탐색하여 해결할 수 있지만 *O(A+B)* A가 매우 큰 크기의 배열이라면 이진탐색으로만 해결할 수 있게 분별력을 줄 수 있음.
 
 ```
-/***
- * 추가예정
- *
- ***/
+#include <stdio.h>
+#include <math.h> //abs
+
+int s[1000001];
+
+int main(){
+    int i, n, k;
+    scanf("%d %d", &n, &k);
+    for(i=0; i<n; ++i) scanf("%d", &s[i]);
+    int l=0, r=n-1, p, preIndex=l;
+    for(i=0; i<k; ++i){
+        scanf("%d", &p);
+        // A와 B가 이미 정렬된 상태라면, 이전에 검색했던 정답보다 작은 수는 현재의 정답에서 제외할 수 있습니다!
+        l=preIndex, r=n-1;
+        // 이진탐색으로 정답을 추려냄
+        while(l<=r){
+            int mid=(l+r)/2;
+            if(s[mid] > p) r=mid-1;
+            else l=mid+1;
+        }
+        // 마지막으로 추려진 두 수 중에서 차이가 더 작은쪽을 선택
+        if(abs(p-s[l]) >= abs(p-s[r])){
+            printf("%c%d ", p > s[r] ? '-' : '+', (int)abs(p-s[r]));
+            preIndex = r;
+        }
+        else {
+            printf("%c%d ", p > s[l] ? '-' : '+', (int)abs(p-s[l]));
+            preIndex = l;
+        }
+    }
+    return 0;
+}
 ```
 
 - B의 각 원소에 대해 A로부터 하나씩 검사하며 찾을 수 있습니다. 가장 떠올리기 쉽고, 구현하기도 쉽지만 이 경우에는 *O(AB)*의 시간복잡도를 가집니다.
