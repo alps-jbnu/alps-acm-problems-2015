@@ -49,9 +49,9 @@
 ### E. 티모장인 오복실
 [문제](https://github.com/sjw0687/alps-acm-problems-2015/blob/master/%ED%8B%B0%EB%AA%A8%EC%9E%A5%EC%9D%B8%20%EC%98%A4%EB%B3%B5%EC%8B%A4/description.md)
 
-[정답 설명](https://github.com/sjw0687/alps-acm-problems-2015/blob/master/%EA%B1%B4%EC%84%A4%20%EB%A1%9C%EB%B4%87/solution.md)
+[정답 설명](https://github.com/sjw0687/alps-acm-problems-2015/blob/master/%ED%8B%B0%EB%AA%A8%EC%9E%A5%EC%9D%B8%20%EC%98%A4%EB%B3%B5%EC%8B%A4/solution.md)
 
-[정답 코드](https://github.com/sjw0687/alps-acm-problems-2015/blob/master/%ED%8B%B0%EB%AA%A8%EC%9E%A5%EC%9D%B8%20%EC%98%A4%EB%B3%B5%EC%8B%A4/solution.md)
+[정답 코드](https://github.com/sjw0687/alps-acm-problems-2015/blob/master/%ED%8B%B0%EB%AA%A8%EC%9E%A5%EC%9D%B8%20%EC%98%A4%EB%B3%B5%EC%8B%A4/solution.cpp)
 
 [입력](https://github.com/sjw0687/alps-acm-problems-2015/blob/master/%ED%8B%B0%EB%AA%A8%EC%9E%A5%EC%9D%B8%20%EC%98%A4%EB%B3%B5%EC%8B%A4/input.txt)
 
